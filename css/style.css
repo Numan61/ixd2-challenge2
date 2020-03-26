@@ -1,0 +1,138 @@
+body{
+   background-color: darkslategray;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+h1{
+      color: red;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    -webkit-animation-name: color;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.flex-container {
+  display: flex;
+    flex-direction: column;
+}
+
+.flex-container > #name{
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+    color: white;
+}
+
+.image{
+    width:200px;
+    height:200px;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+     -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 7s linear infinite;
+    
+}
+
+
+.middag{
+     width:200px;
+    height:200px;
+}
+
+.middag:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+
+#tijd{
+    font-size: 30px;
+    margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+    color:white;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes color {
+  0%   {color: white;}
+  10%  {color: #d66868;}
+  20%  {color: white;}
+  30%  {color: #d66868;}
+  40%  {color: white;}
+  50%  {color: #d66868;}
+  60%  {color: white;}
+  70%  {color: #d66868;}
+  100%  {color: white;}
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+    h1{
+         font-size: 60px;
+    }
+    
+    .image{
+        width: 300px;
+        height: 300px;
+    }
+    
+    #tijd{
+    font-size: 60px;
+}
+    
+    .flex-container > #name{
+  font-size: 30px;
+}
+}
+
+@media only screen and (min-width: 1366px){
+    h1{
+         font-size: 80px;
+    }
+    
+    
+#tijd{
+    font-size: 80px;
+}
+
+    
+    .image{
+         width:400px;
+    height:400px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+}
+
+
